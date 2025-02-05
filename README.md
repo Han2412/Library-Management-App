@@ -5,7 +5,7 @@ App Library Management use Android Studio & JavaScript WebSocket API & MySQL Wor
 
 # Getting Started
 
-Clone the project repository: `https://github.com/NguyenZuy/AppQuanLiThuVien`
+Clone the project repository: `https://github.com/Han2412/Library-Management-App`
 
 ## Database
 
