@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/noteFragment"
+    android:tag="noteFragment"
+    tools:context=".ui.note.NotesFragment">
+
+    <RelativeLayout
+        android:layout_marginTop="30dp"
+        android:id="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:layout_alignParentTop="true">
+
+        <EditText
+            android:id="@+id/searchEditTextNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/searchButtonNote"
+            android:layout_marginLeft="8dp"
+            android:hint="Search..."
+            android:fontFamily="@font/inter_regular"
+            android:textColorHint="@color/black"
+            android:padding="8dp"
+            android:drawableLeft="@drawable/icon_search"
+            android:drawablePadding="8dp"
+            android:textColor="@color/black"
+            android:background="@drawable/ipsearch"
+            android:layout_centerVertical="true"/>
+
+        <Button
+            android:id="@+id/searchButtonNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Search"
+            android:textColor="@color/black"
+            android:fontFamily="@font/inter_regular"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:background="?android:attr/selectableItemBackground"/>
+    </RelativeLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="307dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchLayout"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginBottom="0dp"
+        android:background="@android:color/white"
+        android:fontFamily="@font/inter_bold"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        app:tabTextColor="@color/main"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/btnScanReturn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/tabLayout"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="-45dp"
+        android:layout_marginRight="-1dp"
+        android:background="@android:color/white"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icon_barcode" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:background="@android:color/white"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/tabLayout"/>
+
+</RelativeLayout>

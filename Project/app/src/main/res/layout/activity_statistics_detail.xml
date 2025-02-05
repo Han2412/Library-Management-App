@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.StatisticsDetail"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chi tiết thống kê"
+        android:textSize="25sp"
+        android:gravity="center"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Từ ngày"
+            android:textSize="12sp"
+            />
+        <!-- Ô nhập ngày A -->
+        <EditText
+            android:id="@+id/editTextDateA"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="yyyy/mm/dd"
+            android:inputType="date"
+            android:onClick="showDatePickerDialog"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="đến"
+            android:textSize="12sp"
+            />
+        <!-- Ô nhập ngày B -->
+        <EditText
+            android:id="@+id/editTextDateB"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="yyyy/mm/dd"
+            android:inputType="date"
+            android:onClick="showDatePickerDialog"
+            />
+
+        <!-- Nút Thống kê -->
+        <Button
+            android:id="@+id/buttonStatisticDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thống kê" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+
+        <!-- EditText cho người dùng nhập từ khóa tìm kiếm -->
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Nhập từ khóa tìm kiếm"
+            android:layout_weight="1"
+            />
+
+        <!-- Nút tìm kiếm -->
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tìm kiếm" />
+
+        <!-- ListView để hiển thị kết quả tìm kiếm -->
+
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lsvStatisticsDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        />
+    <Button
+        android:id="@+id/btnExportPDF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Xuất file pdf"/>
+
+
+</LinearLayout>

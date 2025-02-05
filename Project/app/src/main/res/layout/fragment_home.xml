@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/homeFragment"
+    android:tag="homeFragment"
+    tools:context=".ui.home.HomeFragment">
+
+    <RelativeLayout
+        android:layout_marginTop="30dp"
+        android:id="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/searchEditText"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="8dp"
+                android:hint="Search..."
+                android:fontFamily="@font/inter_regular"
+                android:textColorHint="@color/black"
+                android:padding="8dp"
+                android:drawableLeft="@drawable/icon_search"
+                android:drawablePadding="8dp"
+                android:textColor="@color/black"
+                android:background="@drawable/ipsearch"
+                android:layout_centerVertical="true"/>
+
+            <ImageButton
+                android:id="@+id/btn_remove"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:src="@drawable/button_remove"
+                android:layout_marginStart="260dp"
+                android:layout_marginTop="13dp"
+                android:background="@color/zxing_transparent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="0dp"
+            android:text="Search"
+            android:textColor="@color/black"
+            android:fontFamily="@font/inter_regular"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:background="?android:attr/selectableItemBackground"/>
+    </RelativeLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchLayout"
+        android:layout_marginTop="1dp"
+        app:tabGravity="fill"
+        android:fontFamily="@font/inter_bold"
+        android:background="@android:color/white"
+        android:layout_width="85dp"
+        android:layout_marginLeft="35dp"
+        app:tabTextColor="@color/main"
+        app:tabMode="fixed"
+        tools:ignore="MissingConstraints" />
+
+
+    <ImageButton
+        android:id="@+id/btnScan"
+        android:layout_width="50dp"
+        android:background="@android:color/white"
+        android:layout_height="50dp"
+        android:layout_below="@id/tabLayout"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft ="1dp"
+        android:layout_marginTop="-49dp"
+        android:layout_marginRight="30dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icon_barcode" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tabLayout"
+        android:layout_marginTop="38dp"
+        android:background="@android:color/white" />
+
+    <Button
+        android:id="@+id/myButton"
+        android:layout_width="245dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:text=""
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button1" />
+</RelativeLayout>

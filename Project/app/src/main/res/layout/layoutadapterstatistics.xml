@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    >
+    <ImageView
+        android:id="@+id/imgViewStatistic"
+        android:layout_width="400px"
+        android:layout_height="400px"
+
+        android:layout_marginEnd="10dp"
+       />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/nameBook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sách a"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/numberBorBook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Số lượt mượn"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/numberReturnBook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Số lượt trả"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/revenue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Doanh thu"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/inventory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tồn kho"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+
+</LinearLayout>

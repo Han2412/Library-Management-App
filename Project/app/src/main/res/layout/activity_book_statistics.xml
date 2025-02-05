@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.BookStatistics"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DashBoard"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Từ ngày"
+            android:textSize="12sp"
+            />
+        <!-- Ô nhập ngày A -->
+        <EditText
+            android:id="@+id/editTextDateA"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="yyyy/mm/dd"
+            android:inputType="date"
+            android:onClick="showDatePickerDialog"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="đến"
+            android:textSize="12sp"
+            />
+        <!-- Ô nhập ngày B -->
+        <EditText
+            android:id="@+id/editTextDateB"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="yyyy/mm/dd"
+            android:inputType="date"
+            android:onClick="showDatePickerDialog"
+            />
+
+        <!-- Nút Thống kê -->
+        <Button
+            android:id="@+id/buttonStatistic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thống kê" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Biểu đồ 3 quyển sách được mượn nhiều nhất"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#D51717"
+
+        />
+    <com.github.mikephil.charting.charts.BarChart
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/BarChart"/>
+
+    <Button
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chi tiết thống kê"
+        android:id="@+id/buttonStatisticDetail"
+
+        />
+</LinearLayout>

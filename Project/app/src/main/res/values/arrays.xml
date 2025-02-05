@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Non-Binary</item>
+        <!-- Add more items as needed -->
+    </array>
+</resources>
